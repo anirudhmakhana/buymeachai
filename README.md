@@ -21,7 +21,7 @@ If you're passionate about blockchain, TypeScript, or just curious about the pro
 
 ## Feedback & Suggestions
 
-Your feedback is invaluable. If you have any ideas, suggestions, or want to report a bug, please [create an issue](https://github.com/YOUR_GITHUB_USERNAME/BuyMeAChai/issues).
+Your feedback is invaluable. If you have any ideas, suggestions, or want to report a bug, please [create an issue](https://github.com/anirudhmakhana/buymeachai/issues).
 
 ## Conclusion
 
