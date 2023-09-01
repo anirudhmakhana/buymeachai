@@ -4,7 +4,7 @@ import { ethers } from "hardhat";
 interface Memo {
   name: string; // Sender's name
   message: string; // The memo message itself
-  timestamp: number; // Timestamp of the memo
+  timestamp: bigint; // Timestamp of the memo - changed from number to bigint
   from: string; // Ethereum address of the sender
 }
 
@@ -19,7 +19,7 @@ async function getBalance(address: string): Promise<string> {
 async function consoleBalance(addresses: string[]) {
   let counter = 0;
   for (const address of addresses) {
-    console.log(`Address ${counter++}: ${address}`, await getBalance(address));
+    console.log(`Address ${counter++}:`, await getBalance(address));
   }
 }
 
@@ -66,6 +66,10 @@ async function main() {
   // Printing balances after the purchase
   console.log("After buying Chai:");
   await consoleBalance(addresses);
+
+  const memos = await chaiContract.getMemos();
+  console.log("Memos:");
+  await consoleMemos(memos);
 }
 
 // Ensuring that we can use async/await and handle any errors
